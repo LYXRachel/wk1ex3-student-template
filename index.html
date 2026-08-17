@@ -36,10 +36,13 @@
     <button onclick="addNum()">Add Number 1 and Number 2</button>
       <script>
           function addNum() {
-              const val1 = Number(document.getElementById('num1').value.trim);
-              const val2 = Number(document.getElementById('num2').value.trim);
+              const num1 = document.getElementById('num1').value.trim();
+              const num2 = document.getElementById('num2').value.trim();
 
-              if (isNaN(val1) || isNaN(val2) || val1 === "" || val2 === "" ) {
+              const val1 = Number(num1);
+              const val2 = Number(num2);
+
+              if (isNaN(val1) || isNaN(val2) || num1 === "" || num2 === "") {
                   console.log("Please enter a number!");
               }
               else {
